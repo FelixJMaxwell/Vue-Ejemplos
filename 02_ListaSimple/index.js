@@ -1,10 +1,12 @@
 var app = new Vue({
-    el: "app",
+    el: "#app",
     data: {
-        lista: [
-            {nombre: 'Maxwell'},
-            {nombre: 'thefallingboy'},
-            {nombre: 'Kreioz'}
-        ]
-    }
+        nombres: [ 'Oliver', 'FelixJMaxwell', 'Kreioz', 'JMind' ]
+    },
+    methods: {
+        submit: function(){
+            this.nombres.push(this.name);
+            this.name="";
+        }
+    },
 })

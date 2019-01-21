@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/style.min.css">
-    <title>Vue - Lista Simple</title>
+    <title>Vue - Data Binding V-Bind</title>
 </head>
 <body>
     <div id="app">
-        <ul>
-            <li v-for="nombre in nombres">
-                {{ nombre }}
-            </li>
-            <li><input type="text" id="input_Name" placeholder="Ingrese nombre" v-model="name" @keyup.enter="submit"></li>
-        </ul>
+
     </div>
 
     <script src="../js/vue.js"></script>
-    <script src="index.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            
+        })
+    </script>
 </body>
 </html>
