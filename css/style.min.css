@@ -13,4 +13,10 @@ ul {
 a {
   text-decoration: none;
 }
+
+pre {
+  border-radius: 3px;
+  padding: 5px;
+  background: lightgrey;
+}
 /*# sourceMappingURL=style.min.css.map */
