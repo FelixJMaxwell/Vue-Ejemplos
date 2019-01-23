@@ -8,15 +8,21 @@
     <title>Vue - Data Binding V-Bind</title>
 </head>
 <body>
+    
     <div id="app">
-
+        <input type="text" v-model="info">
+        <p v-bind:title = "info">Texto de relleno... {{ info }}</p>
     </div>
+
+
 
     <script src="../js/vue.js"></script>
     <script>
         new Vue({
             el: "#app",
-            
+            data:{
+                info: ''
+            }
         })
     </script>
 </body>
