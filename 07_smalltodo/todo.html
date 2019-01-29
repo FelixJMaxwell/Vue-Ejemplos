@@ -14,7 +14,9 @@
                 {{ item.text }}
             </li>
             <li>
-                <input type="text" id="inputodo" placeholder="ingrese todo" v-model="newItem.text" @keyup.enter="submit">
+                <input type="text" id="inputodo" 
+                    placeholder="ingrese todo" v-model="newItem.text" 
+                    @keyup.enter="submit">
             </li>
         </ol>
     </div>
@@ -24,13 +26,15 @@
         new Vue ({
             el: '#app',
             data: {
-                todos: [{ text: 'Learn JavaScript' }, { text: 'Learn Vue' }, { text: 'Build todo example' }],
+                todos: [{ text: 'Learn JavaScript' }, 
+                        { text: 'Learn Vue' }, 
+                        { text: 'Build todo example' }],
                 newItem: {text: ''}
             },
             methods: {
                 submit: function(){
-                    //this.todos.push(this.todo);
                     this.todos.push({text:this.newItem.text})
+                    this.newItem.text = ""; 
                 }
             },
         });
