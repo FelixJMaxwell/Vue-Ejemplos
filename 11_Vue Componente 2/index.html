@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/style.scss">
+    <title>Vue - Componente 2</title>
+</head>
+<body>
+    <div id="app">
+        <componente saludo="Hello world"></componente>
+        <input type="text" id="saludo" v-bind="saludo" @keyup.enter="submit">
+    </div>
+    
+    <script src="../js/vue.js"></script>
+    <script>
+        Vue.component( 'componente',{
+            props: ['saludo'],
+            template: '<h1> {{ saludo }} </h1>'
+        })
+
+        new Vue({
+            el: "#app",
+            methods: {
+                submit: function(){
+                    
+                }
+            },
+        })
+    </script>
+</body>
+</html>

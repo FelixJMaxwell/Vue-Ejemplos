@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Vue - Componente</title>
+</head>
+<body>
+    <div id="app">
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+    </div>
+
+    <script src="../js/vue.js"></script>
+    <script>
+        //Se deben registrar los componentes antes de la instancia de Vue
+        Vue.component('button-counter', {
+            data: function(){
+                return {
+                    count: 0
+                }
+            },
+            template: '<button class="btn btn-primary" v-on:click="count++">You clicked me {{ count }} times.</button>'
+        })
+
+        new Vue({
+            el: "#app"
+        })
+    </script>
+</body>
+</html>
